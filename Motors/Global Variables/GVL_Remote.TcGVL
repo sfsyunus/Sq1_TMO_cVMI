@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <GVL Name="GVL_Remote" Id="{10367ee5-1a8c-4e85-b1f2-1ccf36d7dd66}">
+    <Declaration><![CDATA[VAR_GLOBAL
+	bRemote:BOOL:=TRUE;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

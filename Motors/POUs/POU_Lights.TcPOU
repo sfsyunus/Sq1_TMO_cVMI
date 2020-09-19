@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="POU_Lights" Id="{2cc51798-d30b-4ad9-813c-6d16cd0fcc10}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM POU_Lights
+VAR_INPUT
+bAxesEnablem:BOOL;
+bEStop:BOOL;
+END_VAR
+VAR
+tTimeLightOn:TIME:=T#0S;
+tTimeStartMove:TIME;
+tCurrentLight:TIME;
+tCurrentMoveDur:TIME;
+bLightRed  AT%Q* : BOOL;
+bLightAmber  AT%Q* : BOOL;
+bLightGreen  AT%Q* : BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF bEStop AND bLimits AND bMotorError
+	THEN
+	
+
+IF bAxis1Enable OR bAxis2Enable OR bAxis3Enable OR bAxis4Enable OR bAxis5Enable OR bAxis6Enable
+	
+	THEN
+	tCurrentLight:=TIME();
+	tCurrentMoveDur:=tCurrentLight-tTimeLightOn;
+	IF (tCurrentMoveDur < T#1S)  
+		THEN
+		bLightRed:=FALSE;
+		bLightAmber:=TRUE;
+		bLightGreen:=FALSE;
+	END_IF
+	IF (tCurrentMoveDur > T#1S)AND (tCurrentMoveDur < T#2S)
+		THEN
+		bLightRed:=FALSE;
+		bLightAmber:=FALSE;
+		bLightGreen:=FALSE;
+	END_IF
+	IF (tCurrentMoveDur > T#2S)
+		THEN
+		tTimeLightOn:=TIME();
+	END_IF
+	ELSE
+	tTimeLightOn:=TIME();	
+	bLightRed:=FALSE;
+	bLightAmber:=FALSE;
+	bLightGreen:=TRUE;
+END_IF
+ELSE
+	bLightRed:=TRUE;
+	bLightAmber:=FALSE;
+	bLightGreen:=FALSE;
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="POU_Lights">
+      <LineId Id="5" Count="0" />
+      <LineId Id="80" Count="0" />
+      <LineId Id="82" Count="0" />
+      <LineId Id="81" Count="0" />
+      <LineId Id="79" Count="0" />
+      <LineId Id="39" Count="1" />
+      <LineId Id="37" Count="0" />
+      <LineId Id="45" Count="0" />
+      <LineId Id="48" Count="2" />
+      <LineId Id="13" Count="0" />
+      <LineId Id="11" Count="0" />
+      <LineId Id="52" Count="0" />
+      <LineId Id="55" Count="0" />
+      <LineId Id="64" Count="0" />
+      <LineId Id="58" Count="1" />
+      <LineId Id="56" Count="0" />
+      <LineId Id="42" Count="0" />
+      <LineId Id="60" Count="0" />
+      <LineId Id="65" Count="0" />
+      <LineId Id="61" Count="1" />
+      <LineId Id="16" Count="0" />
+      <LineId Id="63" Count="0" />
+      <LineId Id="43" Count="0" />
+      <LineId Id="17" Count="0" />
+      <LineId Id="9" Count="1" />
+      <LineId Id="84" Count="0" />
+      <LineId Id="86" Count="1" />
+      <LineId Id="85" Count="0" />
+      <LineId Id="83" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

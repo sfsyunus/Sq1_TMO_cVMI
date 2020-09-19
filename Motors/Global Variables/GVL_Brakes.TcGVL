@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <GVL Name="GVL_Brakes" Id="{5ba2cf9e-0199-4f8e-badd-b0c899f53f7c}">
+    <Declaration><![CDATA[VAR_GLOBAL
+	bAxis1Brake:BOOL;
+	bAxis2Brake:BOOL;
+	bAxis3Brake:BOOL;
+	bAxis4Brake:BOOL;
+	bAxis5Brake:BOOL;
+	bAxis6Brake:BOOL;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

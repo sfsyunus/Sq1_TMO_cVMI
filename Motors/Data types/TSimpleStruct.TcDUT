@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <DUT Name="TSimpleStruct" Id="{45237d77-eef1-40b0-b061-83dfbdb1a0ff}">
+    <Declaration><![CDATA[TYPE TSimpleStruct :
+STRUCT
+	lrealVal: LREAL := 1.23;
+	dintVal1: DINT := 120000;
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

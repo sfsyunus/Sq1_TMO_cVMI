@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="POU_AbortMoves" Id="{55d13cdc-4a62-47c8-a724-0abc837a49f9}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM POU_AbortMoves
+VAR
+	fbAxis1Halt:MC_Halt;
+	fbAxis2Halt:MC_Halt;
+	fbAxis3Halt:MC_Halt;
+	fbAxis4Halt:MC_Halt;
+	fbAxis5Halt:MC_Halt;
+	fbAxis6Halt:MC_Halt;
+	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fbAxis1Halt(
+	Axis:= , 
+	Execute:= , 
+	Deceleration:= , 
+	Jerk:= , 
+	BufferMode:= , 
+	Options:= , 
+	Done=> , 
+	Busy=> , 
+	Active=> , 
+	CommandAborted=> , 
+	Error=> , 
+	ErrorID=> );
+	
+fbAxis2Halt(
+	Axis:= , 
+	Execute:= , 
+	Deceleration:= , 
+	Jerk:= , 
+	BufferMode:= , 
+	Options:= , 
+	Done=> , 
+	Busy=> , 
+	Active=> , 
+	CommandAborted=> , 
+	Error=> , 
+	ErrorID=> );
+	
+fbAxis3Halt(
+	Axis:= , 
+	Execute:= , 
+	Deceleration:= , 
+	Jerk:= , 
+	BufferMode:= , 
+	Options:= , 
+	Done=> , 
+	Busy=> , 
+	Active=> , 
+	CommandAborted=> , 
+	Error=> , 
+	ErrorID=> );
+	
+fbAxis4Halt(
+	Axis:= , 
+	Execute:= , 
+	Deceleration:= , 
+	Jerk:= , 
+	BufferMode:= , 
+	Options:= , 
+	Done=> , 
+	Busy=> , 
+	Active=> , 
+	CommandAborted=> , 
+	Error=> , 
+	ErrorID=> );
+	
+fbAxis5Halt(
+	Axis:= , 
+	Execute:= , 
+	Deceleration:= , 
+	Jerk:= , 
+	BufferMode:= , 
+	Options:= , 
+	Done=> , 
+	Busy=> , 
+	Active=> , 
+	CommandAborted=> , 
+	Error=> , 
+	ErrorID=> );
+	
+fbAxis6Halt(
+	Axis:= , 
+	Execute:= , 
+	Deceleration:= , 
+	Jerk:= , 
+	BufferMode:= , 
+	Options:= , 
+	Done=> , 
+	Busy=> , 
+	Active=> , 
+	CommandAborted=> , 
+	Error=> , 
+	ErrorID=> );]]></ST>
+    </Implementation>
+    <LineIds Name="POU_AbortMoves">
+      <LineId Id="6" Count="11" />
+      <LineId Id="5" Count="0" />
+      <LineId Id="26" Count="0" />
+      <LineId Id="38" Count="0" />
+      <LineId Id="27" Count="10" />
+      <LineId Id="25" Count="0" />
+      <LineId Id="40" Count="0" />
+      <LineId Id="52" Count="0" />
+      <LineId Id="41" Count="10" />
+      <LineId Id="39" Count="0" />
+      <LineId Id="54" Count="0" />
+      <LineId Id="66" Count="0" />
+      <LineId Id="55" Count="10" />
+      <LineId Id="53" Count="0" />
+      <LineId Id="67" Count="0" />
+      <LineId Id="69" Count="11" />
+      <LineId Id="68" Count="0" />
+      <LineId Id="82" Count="0" />
+      <LineId Id="94" Count="0" />
+      <LineId Id="83" Count="10" />
+      <LineId Id="81" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,548 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="POU_AxisMoveAbs" Id="{5b341b12-8db7-4b40-b8e2-bfd744022721}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM POU_AxisMoveAbs
+VAR
+	fbAxis1MoveAbs:MC_MoveAbsolute;
+	fbAxis1MoveAbs2:MC_MoveAbsolute;
+	fbAxis2MoveAbs:MC_MoveAbsolute;
+	fbAxis2MoveAbs2:MC_MoveAbsolute;
+	fbAxis3MoveAbs:MC_MoveAbsolute;
+	fbAxis3MoveAbs2:MC_MoveAbsolute;
+	fbAxis4MoveAbs:MC_MoveAbsolute;
+	fbAxis4MoveAbs2:MC_MoveAbsolute;
+	fbAxis5MoveAbs:MC_MoveAbsolute;
+	fbAxis5MoveAbs2:MC_MoveAbsolute;
+	fbAxis6MoveAbs:MC_MoveAbsolute;
+	fbAxis6MoveAbs2:MC_MoveAbsolute;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//Set Vertical Velocities
+rAxisVelV:=0.5;
+rAxis2Vel:=rAxisVelV;
+rAxis4Vel:=rAxisVelV;
+rAxis6Vel:=rAxisVelV;
+//Set Horizontal Velocities
+rAxisVelH:=1;
+rAxis1Vel:=rAxisVelH;
+rAxis3Vel:=rAxisVelH;
+rAxis5Vel:=rAxisVelH;
+//Create Each Move and Seccondary
+fbAxis1MoveAbs(
+	Axis:= Axis1, 
+	Execute:= , 
+	Position:=rAxis1Target , 
+	Velocity:= rAxis1Vel, 
+	Acceleration:= , 
+	Deceleration:= , 
+	Jerk:= , 
+	BufferMode:=MC_BlendingLow , 
+	Options:= , 
+	Done=> , 
+	Busy=> , 
+	Active=> , 
+	CommandAborted=> , 
+	Error=> , 
+	ErrorID=> );
+
+fbAxis1MoveAbs2(
+	Axis:= Axis1, 
+	Execute:= , 
+	Position:=rAxis1Target , 
+	Velocity:=rAxis1Vel , 
+	Acceleration:= , 
+	Deceleration:= , 
+	Jerk:= , 
+	BufferMode:=MC_BlendingLow , 
+	Options:= , 
+	Done=> , 
+	Busy=> , 
+	Active=> , 
+	CommandAborted=> , 
+	Error=> , 
+	ErrorID=> );
+	
+fbAxis2MoveAbs(
+	Axis:= Axis2, 
+	Execute:= , 
+	Position:=rAxis2Target , 
+	Velocity:= rAxis2Vel, 
+	Acceleration:= , 
+	Deceleration:= , 
+	Jerk:= , 
+	BufferMode:= MC_BlendingLow, 
+	Options:= , 
+	Done=> , 
+	Busy=> , 
+	Active=> , 
+	CommandAborted=> , 
+	Error=> , 
+	ErrorID=> );
+	
+fbAxis2MoveAbs2(
+	Axis:= Axis2, 
+	Execute:= , 
+	Position:=rAxis2Target , 
+	Velocity:= rAxis2Vel, 
+	Acceleration:= , 
+	Deceleration:= , 
+	Jerk:= , 
+	BufferMode:=MC_BlendingLow , 
+	Options:= , 
+	Done=> , 
+	Busy=> , 
+	Active=> , 
+	CommandAborted=> , 
+	Error=> , 
+	ErrorID=> );
+
+fbAxis3MoveAbs(
+	Axis:= Axis3, 
+	Execute:= , 
+	Position:=rAxis3Target , 
+	Velocity:= rAxis3Vel, 
+	Acceleration:= , 
+	Deceleration:= , 
+	Jerk:= , 
+	BufferMode:=MC_BlendingLow , 
+	Options:= , 
+	Done=> , 
+	Busy=> , 
+	Active=> , 
+	CommandAborted=> , 
+	Error=> , 
+	ErrorID=> );
+	
+fbAxis3MoveAbs2(
+	Axis:= Axis3, 
+	Execute:= , 
+	Position:=rAxis3Target , 
+	Velocity:= rAxis3Vel, 
+	Acceleration:= , 
+	Deceleration:= , 
+	Jerk:= , 
+	BufferMode:=MC_BlendingLow , 
+	Options:= , 
+	Done=> , 
+	Busy=> , 
+	Active=> , 
+	CommandAborted=> , 
+	Error=> , 
+	ErrorID=> );
+	
+fbAxis4MoveAbs(
+	Axis:= Axis4, 
+	Execute:= , 
+	Position:=rAxis4Target , 
+	Velocity:= rAxis4Vel, 
+	Acceleration:= , 
+	Deceleration:= , 
+	Jerk:= , 
+	BufferMode:=MC_BlendingLow , 
+	Options:= , 
+	Done=> , 
+	Busy=> , 
+	Active=> , 
+	CommandAborted=> , 
+	Error=> , 
+	ErrorID=> );
+	
+fbAxis4MoveAbs2(
+	Axis:= Axis4, 
+	Execute:= , 
+	Position:=rAxis4Target , 
+	Velocity:= rAxis4Vel, 
+	Acceleration:= , 
+	Deceleration:= , 
+	Jerk:= , 
+	BufferMode:=MC_BlendingLow , 
+	Options:= , 
+	Done=> , 
+	Busy=> , 
+	Active=> , 
+	CommandAborted=> , 
+	Error=> , 
+	ErrorID=> );
+	
+fbAxis5MoveAbs(
+	Axis:= Axis5, 
+	Execute:= , 
+	Position:=rAxis5Target , 
+	Velocity:=rAxis5Vel , 
+	Acceleration:= , 
+	Deceleration:= , 
+	Jerk:= , 
+	BufferMode:=MC_BlendingLow , 
+	Options:= , 
+	Done=> , 
+	Busy=> , 
+	Active=> , 
+	CommandAborted=> , 
+	Error=> , 
+	ErrorID=> );
+	
+fbAxis5MoveAbs2(
+	Axis:= Axis5, 
+	Execute:= , 
+	Position:=rAxis5Target , 
+	Velocity:= rAxis5Vel, 
+	Acceleration:= , 
+	Deceleration:= , 
+	Jerk:= , 
+	BufferMode:=MC_BlendingLow , 
+	Options:= , 
+	Done=> , 
+	Busy=> , 
+	Active=> , 
+	CommandAborted=> , 
+	Error=> , 
+	ErrorID=> );
+	
+fbAxis6MoveAbs(
+	Axis:= Axis6, 
+	Execute:= , 
+	Position:=rAxis6Target , 
+	Velocity:= rAxis6Vel, 
+	Acceleration:= , 
+	Deceleration:= , 
+	Jerk:= , 
+	BufferMode:=MC_BlendingLow , 
+	Options:= , 
+	Done=> , 
+	Busy=> , 
+	Active=> , 
+	CommandAborted=> , 
+	Error=> , 
+	ErrorID=> );
+	
+fbAxis6MoveAbs2(
+	Axis:= Axis6, 
+	Execute:= , 
+	Position:=rAxis6Target , 
+	Velocity:= rAxis6Vel, 
+	Acceleration:= , 
+	Deceleration:= , 
+	Jerk:= , 
+	BufferMode:= MC_BlendingLow, 
+	Options:= , 
+	Done=> , 
+	Busy=> , 
+	Active=> , 
+	CommandAborted=> , 
+	Error=> , 
+	ErrorID=> );
+	
+
+
+	IF bAxis1Enable	THEN
+		IF bAxis1MoveABS THEN
+			IF fbAxis1MoveAbs.Busy THEN
+				IF fbAxis1MoveAbs2.Busy	THEN
+					;
+				ELSE
+					fbAxis1MoveAbs2.Execute:=TRUE;
+					bAxis1MoveAbs:=FALSE;
+				END_IF
+			ELSE
+				fbAxis1MoveAbs.Execute:=TRUE;
+				bAxis1MoveAbs:=FALSE;
+			END_IF
+		ELSIF fbAxis1MoveAbs.Done THEN
+			bAxis1MoveAbs:=FALSE;
+			fbAxis1MoveAbs.Execute:=FALSE;
+		ELSIF fbAxis1MoveAbs2.Done THEN
+			bAxis1MoveAbs:=FALSE;
+			fbAxis1MoveAbs2.Execute:=FALSE;
+		END_IF
+	ELSE 
+		fbAxis1MoveAbs2.Execute:=FALSE;
+		fbAxis1MoveAbs.Execute:=FALSE;
+	END_IF
+	
+	IF bAxis2Enable THEN
+		IF bAxis2MoveABS THEN
+			IF fbAxis2MoveAbs.Busy THEN
+				IF fbAxis2MoveAbs2.Busy THEN
+				;
+				ELSE	
+					fbAxis2MoveAbs2.Execute:=TRUE;
+					bAxis2MoveAbs:=FALSE;
+				END_IF
+			ELSE
+				fbAxis2MoveAbs.Execute:=TRUE;
+				bAxis2MoveAbs:=FALSE;
+			END_IF
+		ELSIF fbAxis2MoveAbs.Done THEN
+			bAxis2MoveAbs:=FALSE;
+			fbAxis2MoveAbs.Execute:=FALSE;
+		ELSIF fbAxis2MoveAbs2.Done THEN
+			bAxis2MoveAbs:=FALSE;
+			fbAxis2MoveAbs2.Execute:=FALSE;
+		END_IF
+	ELSE 
+		fbAxis2MoveAbs2.Execute:=FALSE;
+		fbAxis2MoveAbs.Execute:=FALSE;
+	END_IF
+	
+	IF bAxis3Enable THEN
+		IF bAxis3MoveABS THEN
+			IF fbAxis3MoveAbs.Busy THEN
+				IF fbAxis3MoveAbs2.Busy THEN
+					;
+				ELSE
+					fbAxis3MoveAbs2.Execute:=TRUE;
+					bAxis3MoveAbs:=FALSE;
+				END_IF
+			ELSE
+				fbAxis3MoveAbs.Execute:=TRUE;
+				bAxis3MoveAbs:=FALSE;
+			END_IF
+		ELSIF fbAxis3MoveAbs.Done THEN
+			bAxis3MoveAbs:=FALSE;
+			fbAxis3MoveAbs.Execute:=FALSE;
+		ELSIF fbAxis3MoveAbs2.Done THEN
+			bAxis3MoveAbs:=FALSE;
+			fbAxis3MoveAbs2.Execute:=FALSE;
+		END_IF
+	ELSE 
+		fbAxis3MoveAbs2.Execute:=FALSE;
+		fbAxis3MoveAbs.Execute:=FALSE;
+	END_IF
+	
+	IF bAxis4Enable THEN
+		IF bAxis4MoveABS THEN
+			IF fbAxis4MoveAbs.Busy THEN
+				IF fbAxis4MoveAbs2.Busy THEN
+					;
+				ELSE
+					fbAxis4MoveAbs2.Execute:=TRUE;
+					bAxis4MoveAbs:=FALSE;
+				END_IF
+			ELSE
+				fbAxis4MoveAbs.Execute:=TRUE;
+				bAxis4MoveAbs:=FALSE;
+			END_IF
+		ELSIF fbAxis4MoveAbs.Done THEN
+			bAxis4MoveAbs:=FALSE;
+			fbAxis4MoveAbs.Execute:=FALSE;
+		ELSIF fbAxis4MoveAbs2.Done THEN
+			bAxis4MoveAbs:=FALSE;
+			fbAxis4MoveAbs2.Execute:=FALSE;
+			
+		END_IF		
+	ELSE 
+		fbAxis4MoveAbs2.Execute:=FALSE;
+		fbAxis4MoveAbs.Execute:=FALSE;
+	END_IF
+	
+	IF bAxis5Enable THEN
+		IF bAxis5MoveABS THEN
+			IF fbAxis5MoveAbs.Busy THEN
+				IF fbAxis5MoveAbs2.Busy THEN
+					;
+				ELSE
+					fbAxis5MoveAbs2.Execute:=TRUE;
+					bAxis5MoveAbs:=FALSE;
+				END_IF
+			ELSE
+				fbAxis5MoveAbs.Execute:=TRUE;
+				bAxis5MoveAbs:=FALSE;
+			END_IF
+		ELSIF fbAxis5MoveAbs.Done THEN
+			bAxis5MoveAbs:=FALSE;
+			fbAxis5MoveAbs.Execute:=FALSE;
+		ELSIF fbAxis5MoveAbs2.Done THEN
+			bAxis5MoveAbs:=FALSE;
+			fbAxis5MoveAbs2.Execute:=FALSE;
+		END_IF
+	ELSE 
+		fbAxis5MoveAbs2.Execute:=FALSE;
+		fbAxis5MoveAbs.Execute:=FALSE;
+	END_IF
+	
+	IF bAxis6Enable THEN
+		IF bAxis6MoveABS THEN
+			IF fbAxis6MoveAbs.Busy THEN
+				IF fbAxis6MoveAbs2.Busy THEN
+					;
+				ELSE
+					fbAxis6MoveAbs2.Execute:=TRUE;
+					bAxis6MoveAbs:=FALSE;
+				END_IF
+			ELSE
+				fbAxis6MoveAbs.Execute:=TRUE;
+				bAxis6MoveAbs:=FALSE;
+			END_IF
+		ELSIF fbAxis6MoveAbs.Done THEN
+			bAxis6MoveAbs:=FALSE;
+			fbAxis6MoveAbs.Execute:=FALSE;
+		ELSIF fbAxis6MoveAbs2.Done THEN
+			bAxis6MoveAbs:=FALSE;
+			fbAxis6MoveAbs2.Execute:=FALSE;
+		ELSE 
+			fbAxis6MoveAbs2.Execute:=FALSE;
+			fbAxis6MoveAbs.Execute:=FALSE;
+		END_IF
+	ELSE 
+		fbAxis6MoveAbs2.Execute:=FALSE;
+		fbAxis6MoveAbs.Execute:=FALSE;
+	END_IF
+]]></ST>
+    </Implementation>
+    <LineIds Name="POU_AxisMoveAbs">
+      <LineId Id="513" Count="0" />
+      <LineId Id="487" Count="0" />
+      <LineId Id="510" Count="1" />
+      <LineId Id="506" Count="0" />
+      <LineId Id="512" Count="0" />
+      <LineId Id="503" Count="0" />
+      <LineId Id="508" Count="1" />
+      <LineId Id="507" Count="0" />
+      <LineId Id="514" Count="0" />
+      <LineId Id="16" Count="14" />
+      <LineId Id="7" Count="0" />
+      <LineId Id="168" Count="0" />
+      <LineId Id="41" Count="14" />
+      <LineId Id="33" Count="0" />
+      <LineId Id="56" Count="0" />
+      <LineId Id="167" Count="0" />
+      <LineId Id="74" Count="13" />
+      <LineId Id="72" Count="0" />
+      <LineId Id="89" Count="0" />
+      <LineId Id="169" Count="0" />
+      <LineId Id="90" Count="14" />
+      <LineId Id="171" Count="0" />
+      <LineId Id="170" Count="0" />
+      <LineId Id="105" Count="13" />
+      <LineId Id="88" Count="0" />
+      <LineId Id="120" Count="0" />
+      <LineId Id="172" Count="0" />
+      <LineId Id="121" Count="13" />
+      <LineId Id="119" Count="0" />
+      <LineId Id="136" Count="0" />
+      <LineId Id="174" Count="0" />
+      <LineId Id="137" Count="13" />
+      <LineId Id="135" Count="0" />
+      <LineId Id="152" Count="0" />
+      <LineId Id="175" Count="0" />
+      <LineId Id="153" Count="13" />
+      <LineId Id="151" Count="0" />
+      <LineId Id="176" Count="0" />
+      <LineId Id="178" Count="31" />
+      <LineId Id="177" Count="0" />
+      <LineId Id="210" Count="0" />
+      <LineId Id="212" Count="31" />
+      <LineId Id="211" Count="0" />
+      <LineId Id="244" Count="0" />
+      <LineId Id="516" Count="1" />
+      <LineId Id="515" Count="0" />
+      <LineId Id="431" Count="0" />
+      <LineId Id="246" Count="0" />
+      <LineId Id="533" Count="0" />
+      <LineId Id="538" Count="0" />
+      <LineId Id="534" Count="0" />
+      <LineId Id="299" Count="0" />
+      <LineId Id="304" Count="0" />
+      <LineId Id="535" Count="0" />
+      <LineId Id="298" Count="0" />
+      <LineId Id="300" Count="0" />
+      <LineId Id="302" Count="0" />
+      <LineId Id="301" Count="0" />
+      <LineId Id="291" Count="0" />
+      <LineId Id="303" Count="0" />
+      <LineId Id="292" Count="0" />
+      <LineId Id="305" Count="0" />
+      <LineId Id="308" Count="1" />
+      <LineId Id="307" Count="0" />
+      <LineId Id="433" Count="0" />
+      <LineId Id="445" Count="0" />
+      <LineId Id="434" Count="0" />
+      <LineId Id="432" Count="0" />
+      <LineId Id="435" Count="0" />
+      <LineId Id="539" Count="0" />
+      <LineId Id="311" Count="0" />
+      <LineId Id="313" Count="0" />
+      <LineId Id="545" Count="1" />
+      <LineId Id="549" Count="0" />
+      <LineId Id="547" Count="0" />
+      <LineId Id="316" Count="0" />
+      <LineId Id="548" Count="0" />
+      <LineId Id="317" Count="0" />
+      <LineId Id="540" Count="0" />
+      <LineId Id="319" Count="1" />
+      <LineId Id="322" Count="0" />
+      <LineId Id="324" Count="2" />
+      <LineId Id="328" Count="2" />
+      <LineId Id="447" Count="2" />
+      <LineId Id="446" Count="0" />
+      <LineId Id="437" Count="0" />
+      <LineId Id="541" Count="0" />
+      <LineId Id="332" Count="0" />
+      <LineId Id="334" Count="0" />
+      <LineId Id="550" Count="1" />
+      <LineId Id="553" Count="0" />
+      <LineId Id="552" Count="0" />
+      <LineId Id="337" Count="0" />
+      <LineId Id="554" Count="0" />
+      <LineId Id="338" Count="3" />
+      <LineId Id="343" Count="0" />
+      <LineId Id="345" Count="2" />
+      <LineId Id="349" Count="2" />
+      <LineId Id="454" Count="2" />
+      <LineId Id="453" Count="0" />
+      <LineId Id="439" Count="0" />
+      <LineId Id="542" Count="0" />
+      <LineId Id="353" Count="0" />
+      <LineId Id="355" Count="0" />
+      <LineId Id="555" Count="0" />
+      <LineId Id="558" Count="0" />
+      <LineId Id="557" Count="0" />
+      <LineId Id="357" Count="1" />
+      <LineId Id="556" Count="0" />
+      <LineId Id="359" Count="3" />
+      <LineId Id="364" Count="0" />
+      <LineId Id="366" Count="2" />
+      <LineId Id="370" Count="2" />
+      <LineId Id="457" Count="0" />
+      <LineId Id="460" Count="0" />
+      <LineId Id="458" Count="1" />
+      <LineId Id="352" Count="0" />
+      <LineId Id="441" Count="0" />
+      <LineId Id="543" Count="0" />
+      <LineId Id="373" Count="0" />
+      <LineId Id="375" Count="0" />
+      <LineId Id="559" Count="1" />
+      <LineId Id="562" Count="0" />
+      <LineId Id="561" Count="0" />
+      <LineId Id="378" Count="0" />
+      <LineId Id="563" Count="0" />
+      <LineId Id="379" Count="3" />
+      <LineId Id="384" Count="0" />
+      <LineId Id="386" Count="2" />
+      <LineId Id="390" Count="2" />
+      <LineId Id="469" Count="1" />
+      <LineId Id="468" Count="0" />
+      <LineId Id="471" Count="0" />
+      <LineId Id="443" Count="0" />
+      <LineId Id="544" Count="0" />
+      <LineId Id="393" Count="0" />
+      <LineId Id="395" Count="0" />
+      <LineId Id="564" Count="1" />
+      <LineId Id="567" Count="0" />
+      <LineId Id="566" Count="0" />
+      <LineId Id="398" Count="0" />
+      <LineId Id="568" Count="0" />
+      <LineId Id="399" Count="3" />
+      <LineId Id="404" Count="0" />
+      <LineId Id="406" Count="2" />
+      <LineId Id="410" Count="1" />
+      <LineId Id="461" Count="2" />
+      <LineId Id="412" Count="0" />
+      <LineId Id="466" Count="1" />
+      <LineId Id="465" Count="0" />
+      <LineId Id="413" Count="0" />
+      <LineId Id="258" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

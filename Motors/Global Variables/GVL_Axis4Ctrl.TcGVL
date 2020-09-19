@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <GVL Name="GVL_Axis4Ctrl" Id="{97f3cad0-fe3d-4c90-ab0b-7e3a63a90fc5}">
+    <Declaration><![CDATA[VAR_GLOBAL
+	bAxis4Enable:BOOL;
+	bAxis4EnablePos:BOOL:=TRUE;
+	bAxis4EnableNeg:BOOL:=TRUE;
+	bAxis4JogPos:BOOL;
+	bAxis4JogNeg:BOOL;
+	rAxis4Target:LREAL;
+	bAxis4MoveABS:BOOL;
+	rAxis4Vel:REAL;
+	bAxis4PosLimit:BOOL:=TRUE;
+	bAxis4NegLimit:BOOL:=TRUE;
+	bAxis4GetPos:BOOL:=FALSE;
+	rAxis4Position:LREAL;
+	bAxis4InPosition:BOOL;
+	iAxis4Error:UDINT;
+	bAxis4Error:BOOL;
+	bReset4Done:BOOL:=FALSE;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

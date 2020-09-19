@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <GVL Name="GVL_NC" Id="{5530741b-acb2-462e-baa0-5198af98c542}">
+    <Declaration><![CDATA[VAR_GLOBAL
+	Axis1:AXIS_REF;
+	stAxis1:ST_AxisStatus;
+	Axis2:AXIS_REF;
+	stAxis2:ST_AxisStatus;
+	Axis3:AXIS_REF;
+	stAxis3:ST_AxisStatus;
+	Axis4:AXIS_REF;
+	stAxis4:ST_AxisStatus;	
+	Axis5:AXIS_REF;
+	stAxis5:ST_AxisStatus;
+	Axis6:AXIS_REF;
+	stAxis6:ST_AxisStatus;
+	rAxisVelV:REAL:=2;
+	rAxisVelH:REAL:=2;
+	bLimits:BOOL;
+	bMotorError:BOOL:=FALSE;
+	bReSetMotor:BOOL:=FALSE;
+	bAbortMove:BOOL:=FALSE;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

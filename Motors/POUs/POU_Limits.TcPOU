@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="POU_Limits" Id="{65bd23c4-dabb-40bf-9051-f9c68127667f}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM POU_Limits
+VAR
+	bAxis1LimitPosI AT%I* :BOOL;
+	bAxis1LimitNegI AT%I* :BOOL;
+	bAxis2LimitPosI AT%I* :BOOL;
+	bAxis2LimitNegI AT%I* :BOOL;
+	bAxis3LimitPosI AT%I* :BOOL;
+	bAxis3LimitNegI AT%I* :BOOL;
+	bAxis4LimitPosI AT%I* :BOOL;
+	bAxis4LimitNegI AT%I* :BOOL;
+	bAxis5LimitPosI AT%I* :BOOL;
+	bAxis5LimitNegI AT%I* :BOOL;
+	bAxis6LimitPosI AT%I* :BOOL;
+	bAxis6LimitNegI AT%I* :BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF bAxis1LimitPosI AND bAxis1LimitNegI AND bAxis2LimitPosI AND bAxis2LimitNegI AND bAxis3LimitPosI AND bAxis3LimitNegI AND bAxis4LimitPosI AND bAxis4LimitNegI AND bAxis5LimitPosI AND bAxis5LimitNegI AND bAxis6LimitPosI AND bAxis6LimitNegI
+	THEN bLimits:= TRUE;
+	ELSE bLimits:=FALSE;
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="POU_Limits">
+      <LineId Id="5" Count="0" />
+      <LineId Id="18" Count="0" />
+      <LineId Id="20" Count="0" />
+      <LineId Id="19" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="POU_AxesError" Id="{14000388-cb1e-4082-ad11-428f6aceafb2}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM POU_AxesError
+VAR
+	bAxis1ErrorI AT%I* :BOOL;
+	bAxis2ErrorI AT%I* :BOOL;
+	bAxis3ErrorI AT%I* :BOOL;
+	bAxis4ErrorI AT%I* :BOOL;
+	bAxis5ErrorI AT%I* :BOOL;
+	bAxis6ErrorI AT%I* :BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF bAxis1ErrorI OR bAxis2ErrorI OR bAxis3ErrorI OR bAxis4ErrorI OR bAxis5ErrorI OR bAxis6ErrorI
+	THEN
+	bMotorError:=FALSE;
+	ELSE
+		bMotorError:=TRUE;
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="POU_AxesError">
+      <LineId Id="5" Count="0" />
+      <LineId Id="14" Count="0" />
+      <LineId Id="16" Count="1" />
+      <LineId Id="20" Count="0" />
+      <LineId Id="15" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
